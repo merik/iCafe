@@ -31,7 +31,9 @@ struct ItemDetail: View {
                 .padding()
             Button("Order This") {
                 self.order.add(item: self.item)
-            }.font(.headline)
+            }
+            .font(.headline)
+            .buttonStyle(ButtonGradientBackgroundStyle())
             
             Spacer()
         }

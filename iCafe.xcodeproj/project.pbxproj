@@ -24,6 +24,7 @@
 		036BCD9724A450BC00252FA4 /* iCafeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036BCD9624A450BC00252FA4 /* iCafeUITests.swift */; };
 		036BCDA824A450FA00252FA4 /* menu.json in Resources */ = {isa = PBXBuildFile; fileRef = 036BCDA724A450FA00252FA4 /* menu.json */; };
 		036BCDAA24A4511100252FA4 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 036BCDA924A4511100252FA4 /* Menu.swift */; };
+		0374A0CB24A4B33A00AA1BB2 /* ButtonGradientBackgroundStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0374A0CA24A4B33A00AA1BB2 /* ButtonGradientBackgroundStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		036BCD9824A450BC00252FA4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		036BCDA724A450FA00252FA4 /* menu.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = menu.json; sourceTree = "<group>"; };
 		036BCDA924A4511100252FA4 /* Menu.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
+		0374A0CA24A4B33A00AA1BB2 /* ButtonGradientBackgroundStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonGradientBackgroundStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 		036BCD7324A450BA00252FA4 /* iCafe */ = {
 			isa = PBXGroup;
 			children = (
+				0374A0C924A4B30D00AA1BB2 /* Views */,
 				036772DA24A46CCE00287F33 /* Helpers */,
 				036BCDA624A450DE00252FA4 /* MockData */,
 				036BCDA524A450D200252FA4 /* Screens */,
@@ -201,6 +204,14 @@
 				036BCDA724A450FA00252FA4 /* menu.json */,
 			);
 			path = MockData;
+			sourceTree = "<group>";
+		};
+		0374A0C924A4B30D00AA1BB2 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0374A0CA24A4B33A00AA1BB2 /* ButtonGradientBackgroundStyle.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,6 +355,7 @@
 				036772E524A46E2C00287F33 /* MenuView.swift in Sources */,
 				036772E124A46DDB00287F33 /* ItemDetail.swift in Sources */,
 				036772E324A46E0300287F33 /* OrderView.swift in Sources */,
+				0374A0CB24A4B33A00AA1BB2 /* ButtonGradientBackgroundStyle.swift in Sources */,
 				036BCD7924A450BA00252FA4 /* HomeView.swift in Sources */,
 				036772DC24A46CF400287F33 /* Helper.swift in Sources */,
 			);

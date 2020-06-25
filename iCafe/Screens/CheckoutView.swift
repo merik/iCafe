@@ -44,7 +44,7 @@ struct CheckoutView: View {
             Section(header: Text("TOTAL: $\(totalPrice, specifier: "%.2f")").font(.largeTitle)) {
                 Button("Confirm order") {
                     self.showingPaymentAlert.toggle()
-                }
+                }.buttonStyle(ButtonGradientBackgroundStyle())
             }
         }.navigationBarTitle(Text("Payment"), displayMode: .inline)
             .alert(isPresented: $showingPaymentAlert) {
