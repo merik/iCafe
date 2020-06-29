@@ -10,8 +10,7 @@ import SwiftUI
 
 struct HomeView: View {
     @ObservedObject var viewRouter = HomeViewRouter()
-
-
+    @EnvironmentObject var order: Order
 
     private var isShowingMenu: Bool {
         return viewRouter.currentView == .menu
@@ -61,6 +60,17 @@ struct HomeView: View {
                         Text("Order")
                             .font(.headline)
                             .foregroundColor(self.isShowingOrder ? self.selectingColor : self.unselectingColor)
+                        ZStack {
+                            Circle()
+                                .foregroundColor(.red)
+                            Text("\(self.order.items.count)")
+                                .foregroundColor(.white)
+                                .font(Font.system(size: 12))
+                                .fontWeight(.bold)
+                            
+                        }.frame(width: 15, height: 15, alignment: .center)
+                            .offset(x: 10, y: -60)
+                            .opacity(self.order.items.count > 0 ? 1.0 : 0.0)
                     }.frame(width: geometry.size.width / 2, height: 50, alignment: .center)
                     .onTapGesture {
                         self.viewRouter.currentView = .order
