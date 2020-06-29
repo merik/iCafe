@@ -11,12 +11,14 @@ import SwiftUI
 struct CheckoutView: View {
     @EnvironmentObject var order: Order
     static let paymentTypes = ["Cash", "Credit Card", "iDine Points"]
+    static let pickupTimes = ["Now", "Tonight", "Tomorrow Morning"]
     static let tipAmounts = [10, 15, 20, 25, 0]
     
     @State private var paymentType = 0
     @State private var addLoyaltyDetails = false
     @State private var loyaltyNumber = ""
     @State private var tipAmount = 1
+    @State private var pickupTime = 0
     @State private var showingPaymentAlert = false
     
     var body: some View {
@@ -34,6 +36,15 @@ struct CheckoutView: View {
                     TextField("Enter you iDine ID", text: $loyaltyNumber)
                 }
             }
+            
+            Section {
+                Picker("Pickup Time: ", selection: $pickupTime) {
+                    ForEach(0 ..< Self.pickupTimes.count) {
+                        Text(Self.pickupTimes[$0])
+                    }
+                }
+            }
+            
             Section(header: Text("Add a tip?")) {
                 Picker("Percentage: ", selection: $tipAmount) {
                     ForEach(0 ..< Self.tipAmounts.count) {
@@ -41,6 +52,7 @@ struct CheckoutView: View {
                     }
                 }.pickerStyle(SegmentedPickerStyle())
             }
+            
             Section(header: Text("TOTAL: $\(totalPrice, specifier: "%.2f")").font(.largeTitle)) {
                 Button("Confirm order") {
                     self.showingPaymentAlert.toggle()
